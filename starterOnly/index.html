@@ -53,14 +53,26 @@
       </div>
 
       <div class="bground">
-        <div class="content">
+        <div class="thanks">
           <span class="close"></span>
+          <div class="thanks-body">
+            <span>Merci pour votre inscription</span>
+          </div>
+          <input
+                class="btn-submit"
+                type="submit"
+                class="button"
+                value="Fermer"
+              />
+        </div>
+        <div class="content">
+          <span class="close" onclick="closeModal()"></span>
           <div class="modal-body">
             <form
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              onsubmit="return validate(event);"
             >
               <div
                 class="formData">
@@ -88,7 +100,7 @@
                 <label>E-mail</label><br>
                 <input
                   class="text-control"
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
                 /><br>
@@ -106,7 +118,7 @@
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <input type="text" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div

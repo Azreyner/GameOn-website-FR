@@ -169,7 +169,7 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
-.content {
+.content, .thanks {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
@@ -183,10 +183,31 @@ main {
   padding-top: 10px;
 }
 
-.modal-body {
+.thanks{
+  display: none;
+  opacity: 0;
+  animation: none;
+}
+
+.modal-body, .thanks-body {
   padding: 15px 8%;
   margin: 15px auto;
 }
+
+.thanks input{
+  margin-bottom: 25px;
+}
+
+.thanks-body{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.thanks-body span{
+  margin-top: auto;
+}*/
 
 label {
   font-family: var(--font-default);
@@ -524,6 +545,39 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+.animate-close {
+  animation-name: modalClose;
+  animation-duration: var(--modal-duration);
+  animation-fill-mode: forwards;
+}
+
+.animate-enter {
+  animation-name: thanksOpen;
+  animation-duration: var(--modal-duration);
+  animation-fill-mode: forwards;
+}
+
+@keyframes modalClose {
+  from {
+    opacity: 1;
+    transform: translateY(150px);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes thanksOpen{
+  from{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(250px);
   }
 }
 
