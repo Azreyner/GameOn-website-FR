@@ -108,7 +108,8 @@ function verifierString (laChaine){
 }
 
 function verifierNombre (laValeur){
-  if(laValeur.value.length >= 0 && !isNaN(laValeur)){
+  
+  if(laValeur.value.length >= 1 && !isNaN(laValeur.value)){
     laValeur.parentNode.removeAttribute("data-error");
     laValeur.parentNode.removeAttribute("data-error-visible");
     return true;

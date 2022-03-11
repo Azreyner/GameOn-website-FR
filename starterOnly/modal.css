@@ -35,10 +35,10 @@ img {
   margin: 3.5%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -69,7 +69,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -77,7 +79,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -90,16 +94,16 @@ img {
   }
 }
 
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
-} 
+}
 
 main {
   font-size: 130%;
@@ -111,8 +115,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -169,7 +171,8 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
-.content, .thanks {
+.content,
+.thanks {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
@@ -183,22 +186,23 @@ main {
   padding-top: 10px;
 }
 
-.thanks{
+.thanks {
   display: none;
   opacity: 0;
   animation: none;
 }
 
-.modal-body, .thanks-body {
+.modal-body,
+.thanks-body {
   padding: 15px 8%;
   margin: 15px auto;
 }
 
-.thanks input{
+.thanks input {
   margin-bottom: 25px;
 }
 
-.thanks-body{
+.thanks-body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -570,14 +574,13 @@ footer {
   }
 }
 
-@keyframes thanksOpen{
-  from{
+@keyframes thanksOpen {
+  from {
     opacity: 0;
     transform: translateY(50px);
   }
-  to{
+  to {
     opacity: 1;
-    transform: translateY(250px);
+    transform: translateY(120px);
   }
 }
-
