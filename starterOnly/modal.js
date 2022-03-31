@@ -40,7 +40,7 @@ function closeModal() {
   modalContent.classList.add('animate-close');
   setTimeout(function(){
     modalbg.style.display = "none";
-  }, 700);
+  }, 800);
 }
 
 
@@ -53,7 +53,6 @@ function validate(e){
     }, 700);
     setTimeout(function(){
       thanksContent.style.display = "block";
-      thanksContent.classList.add('animate-enter');
     }, 720);
   }
   else{
@@ -145,7 +144,9 @@ function verifierRadioboutons(radioBoutons){
 
 function verifierEmail(lEmail){
 
-  let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  //let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.+(?:\.[a-zA-Z0-9-]+)*$/;
+  let validRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
 
   if(lEmail.value.match(validRegex)){
     lEmail.parentNode.removeAttribute("data-error");
